@@ -1,5 +1,7 @@
 package pl.sda.model;
 
+import com.google.common.base.Objects;
+
 import java.time.Year;
 
 public abstract class Car implements Driveable, Cloneable {
@@ -8,12 +10,24 @@ public abstract class Car implements Driveable, Cloneable {
     private String color;
     private Year productionYear;
 
+    public  Car(){}
     public Car(int door, String color, Year productionYear) {
         this.door = door;
         this.color = color;
         this.productionYear = productionYear;
     }
 
+    public void setDoor(int door) {
+        this.door = door;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setProductionYear(Year productionYear) {
+        this.productionYear = productionYear;
+    }
     public int getDoor() {
         return door;
     }
@@ -37,5 +51,21 @@ public abstract class Car implements Driveable, Cloneable {
             e.printStackTrace();
         }
         return null;
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Car car = (Car) o;
+        return door == car.door &&
+                Objects.equal(color, car.color) &&
+                Objects.equal(productionYear, car.productionYear);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(door, color, productionYear);
     }
 }

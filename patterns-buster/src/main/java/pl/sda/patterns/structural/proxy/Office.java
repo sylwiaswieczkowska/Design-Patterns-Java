@@ -9,7 +9,7 @@ public class Office {
         boss.start();
         this.looser = boss.finish();
     }
-
+    //TODO how to test it
     public void printLooser() {
         System.out.println(looser);
     }

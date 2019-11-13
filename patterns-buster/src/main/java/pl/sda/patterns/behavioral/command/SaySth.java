@@ -4,16 +4,13 @@ package pl.sda.patterns.behavioral.command;
 public class SaySth {
     public String justSayIt(Object o) {
         if (o instanceof SayHi) {
-            String hi = ((SayHi) o).hi();
-            return hi;
+            return ((SayHi) o).saySth(new SayHi().getHi());
         } else if (o instanceof SayNo) {
-            String no = ((SayNo) o).no();
-            return no;
+            return ((SayNo) o).saySth(new SayNo().getNo());
         } else if (o instanceof SayYes) {
-            String yes = ((SayYes) o).yes();
-            return yes;
+            return ((SayYes) o).saySth(new SayYes().getYes());
         } else {
             throw new RuntimeException("Wrong object type");
         }
     }
-}
+   }

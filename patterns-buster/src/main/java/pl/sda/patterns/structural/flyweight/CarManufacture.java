@@ -7,4 +7,5 @@ public class CarManufacture {
     public static JapaneeseCar getCar(CarType car) {
         return null;
     }
+    //wymyslic sposob na tworzenie samochodu aby utworzyc tylko raz a potem reuzywac
 }
