@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/WZORCE PROJEKTOWE.iml" filepath="$PROJECT_DIR$/.idea/WZORCE PROJEKTOWE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/patterns-buster/patterns-buster.iml" filepath="$PROJECT_DIR$/patterns-buster/patterns-buster.iml" />
+    </modules>
+  </component>
+</project>
